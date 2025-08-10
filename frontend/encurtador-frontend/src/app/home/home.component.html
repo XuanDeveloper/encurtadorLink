@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Encurtador de URL</h1>
+    
+    <div class="input-section">
+        <input 
+            type="text" 
+            [(ngModel)]="urlParaEncurtar" 
+            placeholder="Digite a URL que deseja encurtar" 
+            [disabled]="isLoading"
+        />
+        <button 
+            (click)="encurtarUrl(urlParaEncurtar)" 
+            [disabled]="isLoading || !urlParaEncurtar.trim()"
+        >
+            {{ isLoading ? 'Encurtando...' : 'Encurtar' }}
+        </button>
+    </div>
+
+    <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+    </div>
+
+    <div class="result-section" *ngIf="urlEncurtada">
+        <h3>URL Encurtada:</h3>
+        <div class="url-display">
+            <span class="short-url">{{ urlEncurtada }}</span>
+            <div class="url-actions">
+                <button (click)="redirecionarUrl(urlEncurtada)">
+                    Abrir URL
+                </button>
+                <button (click)="copiarUrl()" class="copy-btn">
+                    Copiar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

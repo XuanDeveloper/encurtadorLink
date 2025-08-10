@@ -7,7 +7,7 @@ Um projeto de estudo rápido que implementa um encurtador de URLs com backend em
 Este projeto permite que os usuários encurtem URLs longas em links mais curtos e gerenciáveis. O sistema consiste em:
 
 - **Backend**: API REST em Node.js com Express e MongoDB
-- **Frontend**: Interface web em Angular com design responsivo
+- **Frontend**: Interface web em Angular
 - **Funcionalidades**: Encurtamento de URLs, redirecionamento e cópia para área de transferência
 
 ## 🏗️ Arquitetura
